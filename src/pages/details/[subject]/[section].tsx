@@ -29,7 +29,7 @@ const DetailsPage = () => {
   const { subject, section } = router.query;
 
   if (!subject || !section) {
-    return <div>Brakujące dane</div>;
+    return <div className="text-black">Brakujące dane</div>;
   }
 
   const {
@@ -42,7 +42,7 @@ const DetailsPage = () => {
 
   return (
     <div className="p-4 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold mb-6 text-center">
+      <h1 className="text-2xl font-bold mb-6 text-center text-black">
         {subject} - {section}
       </h1>
 
@@ -54,12 +54,15 @@ const DetailsPage = () => {
 
       {details && (
         <div className="mt-4">
-          <h2 className="text-lg font-semibold mb-4">Podtematy:</h2>
+          <h2 className="text-lg font-semibold mb-4 text-black">Podtematy:</h2>
           <ul className="space-y-2">
             {Object.values(details).map((value, index) => {
               if (typeof value === "string") {
                 return (
-                  <li key={index} className="bg-white p-2 rounded shadow">
+                  <li
+                    key={index}
+                    className="bg-white p-2 rounded shadow text-black"
+                  >
                     {value}
                   </li>
                 );

@@ -46,7 +46,9 @@ const HomePage = () => {
 
   return (
     <div className="p-4 bg-gray-100 min-h-screen">
-      <h1 className="text-2xl font-bold mb-6 text-center">Home Page</h1>
+      <h1 className="text-2xl font-bold mb-6 text-center text-black">
+        Home Page
+      </h1>
       <div className="flex justify-center">
         <form className="w-1/3">
           <div className="mb-4">
@@ -58,7 +60,7 @@ const HomePage = () => {
             </label>
             <select
               id="subject"
-              className="w-full border p-2 rounded"
+              className="w-full border p-2 rounded text-black"
               onChange={handleSubjectChange}
             >
               <option value="">Wybierz przedmiot</option>
@@ -78,12 +80,17 @@ const HomePage = () => {
 
       {sections.length > 0 && (
         <div className="mt-6">
-          <h2 className="text-lg font-semibold mb-4 text-center">Działy:</h2>
-          <ul className="space-y-2">
+          <h2 className="text-lg font-semibold mb-4 text-center text-black">
+            Działy:
+          </h2>
+          <ul className="space-y-2 text-black">
             {sections.map((section: { dzial: string }, index: number) => (
-              <li key={index} className="bg-white p-2 rounded shadow">
+              <li
+                key={index}
+                className="bg-white p-2 rounded shadow text-black"
+              >
                 <Link href={`/details/${selectedSubject}/${section.dzial}`}>
-                  <p>{section.dzial}</p>
+                  <p className="text-black">{section.dzial}</p>
                 </Link>
               </li>
             ))}
