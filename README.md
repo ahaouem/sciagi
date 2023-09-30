@@ -2,7 +2,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First create .env with proper data in this schema:
+```typescript
+DB_USER=
+DB_PASSWORD=
+DB_DATABASE=
+DB_SERVER=
+DB_PORT
+```
+
+
+then run the development server:
 
 ```bash
 npm run dev
