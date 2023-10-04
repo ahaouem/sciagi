@@ -1,3 +1,4 @@
+use master
 DROP DATABASE Sciagi
 CREATE DATABASE sciagi;
 use sciagi
@@ -49,11 +50,6 @@ CREATE TABLE sciagachemia (
 
 
 
-INSERT INTO sciagahistoria (dzial, podtemat1, podtemat2, podtemat3, podtemat4, podtemat5, podtemat6, podtemat7, podtemat8)
-VALUES ('Starożytność', 'Egipt', 'Grecja', 'Rzym', 'Chiny', 'Indie', 'Mezopotamia', 'Persja', 'Ameryka przedkolumbijska');
-
-INSERT INTO sciagahistoria (dzial, podtemat1, podtemat2)
-VALUES ('Średniowiecze', 'Krucjaty', 'Feudalizm');
 
 INSERT INTO sciagahistoria (dzial, podtemat1, podtemat2, podtemat3, podtemat4, podtemat5)
 VALUES (
@@ -66,18 +62,22 @@ VALUES (
 );
 
 
-INSERT INTO sciagabiologia (dzial, podtemat1, podtemat2, podtemat3, podtemat4, podtemat5, podtemat6, podtemat7, podtemat8)
-VALUES ('Komórka', 'Budowa', 'Podział', 'Fotosynteza', 'Oddychanie komórkowe', 'DNA', 'RNA', 'Mitochondrium', 'Jądro komórkowe');
-
-INSERT INTO sciagabiologia (dzial, podtemat1, podtemat2, podtemat3)
-VALUES ('Ewolucja', 'Darwin', 'Selekcja naturalna', 'Ewolucja człowieka');
 
 
-INSERT INTO sciagachemia (dzial, podtemat1, podtemat2, podtemat3, podtemat4, podtemat5, podtemat6, podtemat7, podtemat8)
-VALUES ('Pierwiastki', 'Wodór', 'Hel', 'Węgiel', 'Azot', 'Tlen', 'Neon', 'Krypton', 'Radon');
-
-INSERT INTO sciagachemia (dzial, podtemat1, podtemat2, podtemat3, podtemat4)
-VALUES ('Związki chemiczne', 'Kwasy', 'Zasady', 'Sole', 'Estry');
+INSERT INTO sciagabiologia 
+(dzial, podtemat1, podtemat2, podtemat3, podtemat4, podtemat5, podtemat6, podtemat7, podtemat8)
+VALUES
+(
+    'Tkanki',
+    'Tkanka - zbiór komórek o podanej budowie pełniących podobne funkcje w organizmie. Rodzaje Tkanek: Mięśniowa, Nabłonkowa, Nerwowa, Łączna. Tkanka łączna dzieli się na tkanki: Tkanka łączna właściwa: tłuszczowa. Tkanka łączna podporowa: kostna, chrzęstnta. Tkanka łączna płynna: krew.',
+    'Tkanka tłuszczowa - Zółta - występuje u osobników dorosłych. Pełni funkcje amortyzującą, termoizolacyjną i magazynującą substancje zapasowe. Brunatna - występuje w okresie noworodkowym. Pełni funkcje termoregulacyjne. Tkankę tłuszczową posiada każdy, ponieważ to element występujący w podskórze.',
+    'Tkanka chrzęstna - Chechy tkanki chrzęstnej: Sprężysta i elastyczna, Odporna na urazy mechaniczne, Rozciągliwa. Występuje w: Powierzchnie stawowe kości, Małżowina uszna, Elementy krtani, Łączy niektóre kości, np. żebra z mostkiem.',
+    'Tkanka kostna - Funkcja - tworzy kości. Cechy: Twarda, Mało elastyczna, Sztywna.',
+    'Krew - Funkcje: Tkanka transportująca: tlen, CO2, mikro i makroelementy, białka, cukry, tłuszcze, kwasy nukleinowe. Ochrona organizmu przed drobnoustrojami.',
+    'Tkanka łączna - Tkanka zbudowana z substancji międzykomórkowej oraz komórek, które są w tej substancji zanurzone.',
+    'Homeostaza - Jest to stan równowagi organizmu. Homeostaza: Temperatura 35-37, Ciśnienie 120/80 mmHg, Poziom tlenu i dwutlenku węgla, Ph krwi - kwasowość środowiskowa, Poziom cukru -> glukoza 70-140 mg/na 1L krwi, H2O nawodnienie komórek, Składniki mineralne - mikro i makro elementy, Żelazo.',
+    'Zaburzenia homeostazy: Choroby, Stres, Brak snu, Warunki atmosferyczne, Zła dieta, Alkochol, Używki, Papierosy, Brak ruchu.'
+);
 
 
 SELECT * FROM sciagahistoria;
