@@ -25,6 +25,7 @@ const fetchSections = (subject: string) => {
     .then((response) => response.data);
 };
 
+
 const HomePage = () => {
   const [selectedSubject, setSelectedSubject] = useState<string>("");
 
