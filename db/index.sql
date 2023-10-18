@@ -3,6 +3,8 @@ DROP DATABASE Sciagi
 CREATE DATABASE sciagi;
 use sciagi
 
+select * from sys.databases
+
 
 CREATE TABLE sciagahistoria (
     id INT PRIMARY KEY IDENTITY(1,1),
@@ -50,7 +52,7 @@ CREATE TABLE sciagachemia (
 
 
 
-
+SELECT * from sciagabiologia, sciagahistoria;
 INSERT INTO sciagahistoria (dzial, podtemat1, podtemat2, podtemat3, podtemat4, podtemat5)
 VALUES (
     'Świat w XVI wieku',
