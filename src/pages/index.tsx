@@ -25,7 +25,6 @@ const fetchSections = (subject: string) => {
     .then((response) => response.data);
 };
 
-
 const HomePage = () => {
   const [selectedSubject, setSelectedSubject] = useState<string>("");
 
@@ -55,15 +54,13 @@ const HomePage = () => {
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="subject"
-            >
+              htmlFor="subject">
               Wybierz przedmiot:
             </label>
             <select
               id="subject"
               className="w-full border p-2 rounded text-black"
-              onChange={handleSubjectChange}
-            >
+              onChange={handleSubjectChange}>
               <option value="">Wybierz przedmiot</option>
               <option value="Historia">Historia</option>
               <option value="Biologia">Biologia</option>
@@ -88,8 +85,7 @@ const HomePage = () => {
             {sections.map((section: { dzial: string }, index: number) => (
               <li
                 key={index}
-                className="bg-white p-2 rounded shadow text-black"
-              >
+                className="bg-white p-2 rounded shadow text-black">
                 <Link href={`/details/${selectedSubject}/${section.dzial}`}>
                   <p className="text-black">{section.dzial}</p>
                 </Link>

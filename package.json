@@ -15,7 +15,9 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-query": "^3.39.3"
+    "react-markdown": "^9.0.3",
+    "react-query": "^3.39.3",
+    "remark-gfm": "^4.0.0"
   },
   "devDependencies": {
     "@types/mssql": "^9.1.1",
